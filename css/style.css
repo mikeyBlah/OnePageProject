@@ -74,36 +74,33 @@ body{
 }
 #pageMarkerContain{
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 80px;
     height: 400px;
     right: 20px;
     top: calc( 50% - 200px);
 }
-#line{
-    height: 100%;
+.line{
+    height: 50px;
     width: 2px;
     border: 1px solid #FFF;
     position: relative;
-    left: 39px;
 }
 #dotContain{
-    height: 100%;
     display: flex;
-    position: absolute;
-    left: 33px;
-    top: 0;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 }
 .dot{
     width: 14px;
     height: 14px;
     border-radius: 14px;
-    background: #FFF;
+    border: 1px solid #FFF;
 }
 .dotActive{
-    background: rgb(0, 87, 99);
+    background: #FFF;
 }
 .show{
     opacity: 1;
