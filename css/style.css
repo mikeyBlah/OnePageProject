@@ -114,3 +114,54 @@ body{
     color: #FFF;
     z-index: 2;
 }
+#hamburgerIcon{
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    z-index: 3;
+    cursor: pointer;
+}
+#hamburgerIcon span{
+    position: absolute;
+    height: 6px;
+    background: #FFF;
+}
+#hamburgerIcon span:nth-of-type(1){
+    top: 0;
+    right: 0;
+    width: 90%;
+    transition: all 0.2s;
+}
+#hamburgerIcon span:nth-of-type(2){
+    top: 16px;
+    right: 0;
+    width: 60%;
+    transition: all 0.4s;
+}
+#hamburgerIcon span:nth-of-type(3){
+    top: 32px;
+    right: 0;
+    width: 30%;
+    transition: all 0.6s;
+}
+#hamburgerIcon:hover span{
+    width: 100%;
+}
+.navMenu{
+    position: fixed;
+    width: 50%;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.3);
+    top: 0px;
+    left: calc(100% - 120px);
+    z-index: 3;
+    transition: all 0.6s;
+    opacity: 0.5;
+    border-bottom-left-radius: 25px;
+}
+.navShow{
+    left: 50%;
+    opacity: 1;
+}

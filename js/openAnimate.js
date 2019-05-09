@@ -5,13 +5,14 @@
     const circle = document.querySelector("#circle");
     const dataY = document.querySelector(".scrollY");
     const dotContain = document.querySelector("#dotContain");
+    const navMenu = document.querySelector(".navMenu");
     const dot = document.querySelectorAll(".dot");
     const container = document.querySelector("#pageContain");
+    const hamIcon = document.querySelector("#hamburgerIcon");
     const wHeight = document.body.offsetHeight;
     const numOfSlides = 5;
     let currentSlide = 1;
-    //title.classList.remove('hide');
-    //title.classList.add('show');
+    let menuOpen = false;
     let p = 0;
     let txt = 'Title here'; /* The text */
     let speed = 100; /* The speed/duration of the effect in milliseconds */
@@ -22,17 +23,14 @@
         title.innerHTML += txt.charAt(p);
         p++;
         setTimeout(typeWriter, speed);
-        console.log(wHeight);
+        }
     }
-    }
-    console.log("triggered");
 
     getScroll();
     shapeMove();
 
     function getScroll(){
         let y = window.scrollY;
-        console.log(y);
         shapeMove(y);
         autoScroll(y);
         dataY.innerHTML = y + "px";
@@ -76,13 +74,29 @@
     }
 
     function markerActive(s){
-        console.log(dot.length);
         for (i = 0; i < dotContain.children.length; i++) {
             dotContain.children[i].classList.remove("dotActive");
-            console.log("class removed");
           }
 
         dotContain.children[s * 2 - 2].classList.add("dotActive");
     }
+
+
+    //------------------> MENU
+
+    hamIcon.addEventListener("click", toggleMenu);
+
+    function toggleMenu(){
+        if(menuOpen == false){
+            navMenu.classList.add("navShow");
+            menuOpen = true;
+        }else{
+            navMenu.classList.remove("navShow");
+            menuOpen = false;
+        }
+    }
+
+
+
 
 };
