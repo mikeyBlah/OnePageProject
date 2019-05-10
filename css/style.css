@@ -165,3 +165,39 @@ body{
     left: 50%;
     opacity: 1;
 }
+
+#moverDot{
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+    background: #FFF;
+    position: fixed;
+    right: 53px;
+    top: 350px;
+    z-index: 5;
+    transition: all 2s;
+}
+
+.animateDot{
+    animation: shrinkMoveGrow 1s;
+}
+
+@keyframes shrinkMoveGrow {
+    0% {
+        top: 350px;
+        transform: scale(1);
+    }
+    25% {
+        top: 100px;
+        transform: scale(0.5);
+    }
+    50% {
+        top: 0;
+    }
+    75% {
+        top: 100px;
+    }
+    100% {
+        top: 0;
+    }
+}
